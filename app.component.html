@@ -1,0 +1,19 @@
+<ejs-grid
+  #grid
+  [dataSource]="data"
+  [aggregates]="aggregateColumns"
+  [columns]="columnList"
+  [pageSettings]="pageSettings"
+  [allowSorting]="true"
+  [allowReordering]="true"
+  [allowResizing]="true"
+  (actionComplete)="actionComplete($event)"
+  (queryCellInfo)="tooltip($event)"
+  (dataBound)="dataBound($event)"
+  *ngIf="columnList.length > 0"
+>
+</ejs-grid>
+
+<button style="margin: 10px; cursor: pointer" (click)="setData()">
+  update data
+</button>
